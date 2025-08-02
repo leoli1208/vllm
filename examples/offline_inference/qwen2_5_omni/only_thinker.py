@@ -5,6 +5,7 @@ This example shows how to use vLLM for running offline inference
 with the correct prompt format on Qwen2.5-Omni (thinker only).
 """
 
+import os
 from typing import NamedTuple
 
 import vllm.envs as envs
@@ -14,6 +15,13 @@ from vllm.assets.image import ImageAsset
 from vllm.assets.video import VideoAsset
 from vllm.multimodal.image import convert_image_mode
 from vllm.utils import FlexibleArgumentParser
+
+# Check if VLLM_USE_V1 is set
+if os.environ.get("VLLM_USE_V1") == "1":
+    raise NotImplementedError(
+        "This example uses vLLM v0 internals and is not compatible with VLLM_USE_V1=1. "
+        "Please use the v1-compatible example or set VLLM_USE_V1=0."
+    )
 
 
 class QueryResult(NamedTuple):
