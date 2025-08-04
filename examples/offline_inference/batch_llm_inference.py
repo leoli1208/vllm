@@ -18,7 +18,13 @@ Ray Data provides functionality for:
 Learn more about Ray Data's LLM integration:
 https://docs.ray.io/en/latest/data/working-with-llms.html
 """
-
+import os
+# Check if VLLM_USE_V1 is set
+if os.environ.get("VLLM_USE_V1") == "1":
+    raise NotImplementedError(
+        "This example uses vLLM v0 internals and is not compatible with VLLM_USE_V1=1. "
+        "Please use the v1-compatible example or set VLLM_USE_V1=0."
+    )
 import ray
 from packaging.version import Version
 from ray.data.llm import build_llm_processor, vLLMEngineProcessorConfig

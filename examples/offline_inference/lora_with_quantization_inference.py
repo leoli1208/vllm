@@ -16,7 +16,13 @@ from huggingface_hub import snapshot_download
 from vllm import EngineArgs, LLMEngine, RequestOutput, SamplingParams
 from vllm.lora.request import LoRARequest
 
-
+import os
+# Check if VLLM_USE_V1 is set
+if os.environ.get("VLLM_USE_V1") == "1":
+    raise NotImplementedError(
+        "This example uses vLLM v0 internals and is not compatible with VLLM_USE_V1=1. "
+        "Please use the v1-compatible example or set VLLM_USE_V1=0."
+    )
 def create_test_prompts(
     lora_path: str,
 ) -> list[tuple[str, SamplingParams, Optional[LoRARequest]]]:

@@ -5,7 +5,13 @@ from argparse import Namespace
 
 from vllm import LLM, EngineArgs, PoolingParams
 from vllm.utils import FlexibleArgumentParser
-
+import os
+# Check if VLLM_USE_V1 is set
+if os.environ.get("VLLM_USE_V1") == "1":
+    raise NotImplementedError(
+        "This example uses vLLM v0 internals and is not compatible with VLLM_USE_V1=1. "
+        "Please use the v1-compatible example or set VLLM_USE_V1=0."
+    )
 
 def parse_args():
     parser = FlexibleArgumentParser()

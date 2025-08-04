@@ -21,7 +21,13 @@ from vllm.utils import FlexibleArgumentParser
 BATCH_SIZE_DEFAULT = 1
 PROMPT_LEN_DEFAULT = 256
 
-
+import os
+# Check if VLLM_USE_V1 is set
+if os.environ.get("VLLM_USE_V1") == "1":
+    raise NotImplementedError(
+        "This example uses vLLM v0 internals and is not compatible with VLLM_USE_V1=1. "
+        "Please use the v1-compatible example or set VLLM_USE_V1=0."
+    )
 @dataclass
 class ProfileContext:
     engine_args: EngineArgs
