@@ -1,0 +1,35 @@
+| File Path                                                              | V1 Compatible? |
+| ---------------------------------------------------------------------- | :------------: |
+| examples/offline_inference/basic/basic.py                              |       ✅       |
+| examples/offline_inference/basic/chat.py                               |       ✅       |
+| examples/offline_inference/basic/classify.py                           |       ❌       |
+| examples/offline_inference/basic/embed.py                              |       ❌       |
+| examples/offline_inference/basic/generate.py                           |       ✅       |
+| examples/offline_inference/basic/score.py                              |       ❌       |
+| examples/offline_inference/audio_language.py                           |       ✅       |
+| examples/offline_inference/automatic_prefix_caching.py                 |                |
+| examples/offline_inference/batch_llm_inference.py                      |       ❌       |
+| examples/offline_inference/chat_with_tools.py                          |       ✅       |
+| examples/offline_inference/context_extension.py                        |       ✅       |
+| examples/offline_inference/encoder_decoder.py                          |       ✅       |
+| examples/offline_inference/embed_jina_embeddings_v3.py                 |       ❌       |
+| examples/offline_inference/embed_matryoshka_fy.py                      |       ❌       |
+| examples/offline_inference/llm_engine_example.py                       |       ❌       |
+| examples/offline_inference/lora_with_quantization_inference.py         |       ❌       |
+| examples/offline_inference/metrics.py                                  |       ✅       |
+| examples/offline_inference/mistral-small.py                            |       ✅       |
+| examples/offline_inference/mlpspeculator.py                            |       ✅       |
+| examples/offline_inference/multilora_inference.py                      |       ✅       |
+| examples/offline_inference/prefix_caching.py                           |       ✅       |
+| examples/offline_inference/prompt_embed_inference.py                   |       ✅       |
+| examples/offline_inference/qwen_1m.py                                  |       ✅       |
+| examples/offline_inference/reproducibility.py                          |       ✅       |
+| examples/offline_inference/save_sharded_state.py                       |       ✅       |
+| examples/offline_inference/simple_profiling.py                         |       ✅       |
+| examples/offline_inference/structured_outputs.py                       |       ✅       |
+| examples/offline_inference/vision_language.py                          |       ✅       |
+| examples/offline_inference/vision_language_embedding.py                |       ✅       |
+| examples/offline_inference/vision_language_multi_image.py              |       ✅       |
+| examples/offline_inference/disaggregated-prefill-v1/prefill_example.py |       ✅       |
+| examples/offline_inference/disaggregated-prefill-v1/decode_example.py  |       ✅       |
+| examples/offline_inference/qwen2_5_omni/only_thinker.py                |       ❌       |
